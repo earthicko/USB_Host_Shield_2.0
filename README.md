@@ -36,32 +36,36 @@ For more information about the hardware see the [Hardware Manual](https://chome.
 
 # Table of Contents
 
-* [How to include the library](#how-to-include-the-library)
-    * [Arduino Library Manager](#arduino-library-manager)
-    * [Manual installation](#manual-installation)
-* [How to use the library](#how-to-use-the-library)
-    * [Documentation](#documentation)
-    * [Enable debugging](#enable-debugging)
-    * [Boards](#boards)
-    * [Bluetooth libraries](#bluetooth-libraries)
-    * [BTHID library](#bthid-library)
-    * [SPP library](#spp-library)
-    * [PS5 Library](#ps5-library)
-    * [PS4 Library](#ps4-library)
-    * [PS3 Library](#ps3-library)
-    * [Xbox Libraries](#xbox-libraries)
-        * [Xbox library](#xbox-library)
-        * [Xbox 360 Library](#xbox-360-library)
-        * [Xbox ONE Library](#xbox-one-library)
-        * [Xbox ONE S Library](#xbox-one-s-library)
-    * [Wii library](#wii-library)
-    * [Switch Pro Library](#switch-pro-library)
-    * [PS Buzz Library](#ps-buzz-library)
-    * [HID Libraries](#hid-libraries)
-    * [MIDI Library](#midi-library)
-    * [amBX Library](#amBX-library)
-* [Interface modifications](#interface-modifications)
-* [FAQ](#faq)
+- [USB Host Library Rev. 2.0](#usb-host-library-rev-20)
+- [Summary](#summary)
+- [Developed By](#developed-by)
+- [Table of Contents](#table-of-contents)
+- [How to include the library](#how-to-include-the-library)
+    - [Arduino Library Manager](#arduino-library-manager)
+    - [Manual installation](#manual-installation)
+- [How to use the library](#how-to-use-the-library)
+    - [Documentation](#documentation)
+    - [Enable debugging](#enable-debugging)
+    - [Boards](#boards)
+    - [Bluetooth libraries](#bluetooth-libraries)
+    - [BTHID library](#bthid-library)
+    - [SPP library](#spp-library)
+    - [PS5 Library](#ps5-library)
+    - [PS4 Library](#ps4-library)
+    - [PS3 Library](#ps3-library)
+    - [Xbox Libraries](#xbox-libraries)
+      - [Xbox library](#xbox-library)
+      - [Xbox 360 Library](#xbox-360-library)
+      - [Xbox ONE Library](#xbox-one-library)
+      - [Xbox ONE S Library](#xbox-one-s-library)
+    - [Wii library](#wii-library)
+    - [Switch Pro Library](#switch-pro-library)
+    - [PS Buzz Library](#ps-buzz-library)
+    - [HID Libraries](#hid-libraries)
+    - [MIDI Library](#midi-library)
+    - [amBX Library](#ambx-library)
+- [Interface modifications](#interface-modifications)
+- [FAQ](#faq)
 
 # How to include the library
 
@@ -132,7 +136,8 @@ Currently the following boards are supported by the library:
       * GPIO16 is **NOT** usable, as it will be used for some other purposes. For example, reset the SoC itself from sleep mode.
       * GPIO6 to 11 is also **NOT** usable, as they are used to connect SPI flash chip and it is used for storing the executable binary content.
 * ESP32 is supported using the [arduino-esp32](https://github.com/espressif/arduino-esp32/)
-    * GPIO5 : SS, GPIO17 : INT, GPIO18 : SCK, GPIO19 : MISO, GPIO23 : MOSI
+    * ESP32: GPIO5 : SS, GPIO17 : INT, GPIO18 : SCK, GPIO19 : MISO, GPIO23 : MOSI
+    * ESP32-S3: GPIO45 : SS, GPIO42 : INT, GPIO36 : SCK, GPIO37 : MISO, GPIO35 : MOSI
 
 The following boards need to be activated manually in [settings.h](settings.h):
 

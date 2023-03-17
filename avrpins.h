@@ -1694,6 +1694,24 @@ MAKE_PIN(P15, 15); // SS
   *(void * const *)(_addr); \
 })
 
+#if defined(ARDUINO_ARCH_ESP32S3)
+
+// Pinout for ESP32-S3 dev module
+
+MAKE_PIN(P0, 0);
+MAKE_PIN(P43, 43); // TX0
+MAKE_PIN(P17, 17); // TX1
+MAKE_PIN(P44, 44); // RX0
+MAKE_PIN(P1, 1); // SDA
+MAKE_PIN(P2, 2); // SCL
+MAKE_PIN(P37, 37); // MISO
+MAKE_PIN(P35, 35); // MOSI
+MAKE_PIN(P36, 36); // SCK
+MAKE_PIN(P45, 45); // SS
+MAKE_PIN(P42, 42); // INT
+
+#else
+
 // Pinout for ESP32 dev module
 
 MAKE_PIN(P0, 0);
@@ -1707,6 +1725,8 @@ MAKE_PIN(P23, 23); // MOSI
 MAKE_PIN(P18, 18); // SCK
 MAKE_PIN(P5, 5); // SS
 MAKE_PIN(P17, 17); // INT
+
+#endif
 
 #endif
 
