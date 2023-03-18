@@ -124,6 +124,7 @@ typedef SPi< P36, P35, P37, P45 > spi;
 #else
 typedef SPi< P18, P23, P19, P5 > spi;
 #endif
+#endif
 #elif defined(ARDUINO_NRF52840_FEATHER)
 typedef SPi< P26, P25, P24, P5 > spi;
 #else
